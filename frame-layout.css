@@ -1,0 +1,99 @@
+@import url("stylesheet.css");
+
+:root {
+    --video-size: 25rem;
+    --main-bg: hsl(222, 55%, 12%);
+
+    --clr-1: #ff3728;
+    --clr-2: #9d0000;
+    --rainbow: linear-gradient(-70deg, var(--clr-1), var(--clr-2), var(--clr-1), var(--clr-2), var(--clr-1), var(--clr-2), var(--clr-2), var(--clr-1));
+}
+
+/* main */
+.main-content {
+    position: relative;
+    z-index: 0;
+    background: var(--main-bg);
+    min-height: calc(100dvh - 1.406rem);
+}
+
+.section-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, var(--video-size)));
+    justify-content: center;
+    gap: var(--spc-default);
+    padding-block: var(--spc-xlg);
+    padding-inline: var(--spc-default);
+    margin-inline: auto;
+    max-width: var(--page-size);
+}
+
+.container-img {
+    margin-bottom: var(--spc-sm);
+}
+
+.subscribe-link {
+    color: var(--color);
+    text-decoration: none;
+}
+
+.profile-name {
+    font-weight: 700;
+}
+
+.profile-sub {
+    font-weight: 600;
+    padding: var(--spc-sm) var(--spc-default);
+    border-radius: 100vw;
+    background-color: var(--black-75);
+    width: fit-content;
+    margin-top: var(--spc-sm);
+    position: relative;
+}
+
+.profile-sub::before,
+.profile-sub::after {
+    content: "";
+    position: absolute;
+    inset: -0.3rem;
+    background: transparent;
+    background-size: 200%;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.profile-sub::before {
+    filter: blur(10px);
+}
+
+.subscribe-link:hover .profile-sub::before,
+.subscribe-link:focus-visible .profile-sub::before,
+.subscribe-link:hover .profile-sub::after,
+.subscribe-link:focus-visible .profile-sub::after {
+    animation: rotate-colors 1s ease-out;
+}
+
+@keyframes rotate-colors {
+    from {
+        background: var(--rainbow);
+        background-size: 200%;
+        background-position: 0%;
+    }
+    to {
+        background: var(--rainbow);
+        background-size: 200%;
+        background-position: 200%;
+    }
+}
+
+/* footer */
+.footer {
+    background: var(--main-bg);
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+    .section-wrapper {
+        padding-inline: revert;
+    }
+}
