@@ -118,41 +118,6 @@
     background: var(--gradient-main);
 }
 
-.section:nth-child(1) {
-    background-image: url("img/index/beatpella-bg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.section:nth-child(2) {
-    background-image: url("img/index/theradbrad-bg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.section:nth-child(3) {
-    background-image: url("img/index/hollow-bg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.section:nth-child(4) {
-    background-image: url("img/index/618fishing-bg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.section:nth-child(5) {
-    background-image: url("img/index/kevinpowell-bg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .section-wrapper {
     display: grid;
     align-content: center;
@@ -191,10 +156,6 @@
     font-size: clamp(var(--fs-md), var(--fs-sm) + 1vw, var(--fs-xlg));
     font-weight: 600;
 }
-
-/* .container-width {
-    max-width: 45rem;
-} */
 
 /* 1000px */
 @media (min-width: 62.5em) {
@@ -241,10 +202,6 @@
     .section:nth-child(1) .section-wrapper {
         position: relative;
     }
-
-    /* .container-width {
-        max-width: 50rem;
-    } */
 }
 
 /* 1920px */

@@ -2,31 +2,6 @@
 const carouselPhotos = document.querySelectorAll(".carousel-photos");
 let carouselWebWorker = undefined, index = 0;
 
-// const beatpellaLink = document.querySelector(".container-width");
-// const hellcat = document.querySelector(".hellcat");
-// const hiss = document.querySelector(".hiss");
-// const huckle = document.querySelector(".huckle");
-// const yella = document.querySelector(".yella");
-// const wing = document.querySelector(".wing");
-// const beatpellaObserver = new IntersectionObserver(entries => {
-//     if(entries[0].isIntersecting) {
-//         const delay = 150;
-//         hellcat.classList.add("animate-show");
-//         setTimeout(() => {
-//             hiss.classList.add("animate-show");
-//             setTimeout(() => {
-//                 huckle.classList.add("animate-show");
-//                 setTimeout(() => {
-//                     yella.classList.add("animate-show");
-//                     setTimeout(() => {
-//                         wing.classList.add("animate-show");
-//                     }, delay);
-//                 }, delay);
-//             }, delay);
-//         }, delay);
-//     }
-// }, {threshold: 1, rootMargin: "0px 0px -100px 0px"});
-
 function initiateCarouselWorker() {
     let indexCSS = [], rotationCSS = [], totalCarousel = carouselPhotos.length - 1;
 
@@ -61,8 +36,6 @@ function shufflePhotos(carouselPhotos, indexCSS, rotationCSS) {
         carouselPhotos[i].style.setProperty("--_rotation", rotationCSS[i]);
     }
 }
-
-// beatpellaObserver.observe(beatpellaLink);
 
 initiateCarouselWorker();
 
